@@ -1,0 +1,15 @@
+syntax = "proto3";
+package myfirstmicro;
+option go_package = "proto;mymicro";
+
+service Hi {
+    rpc MyHello (HelloReq) returns (HelloRes) ;
+}
+
+message HelloReq { 
+    string Name = 1;
+}
+
+message HelloRes {
+    string ResName = 1 ;
+}
